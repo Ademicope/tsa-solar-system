@@ -1,0 +1,708 @@
+/* Reset CSS by Amaka Ndukwu */
+
+/* making use of :where to allow for low specificity making it easy to override */
+
+
+/* 1. border-box for box model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. remove default margin 
+padding is optional but i do this because of lists*/
+
+:where(:not(dialog)) {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 3. great for in-page linking */
+@media(prefers-reduced-motion:no-preference) {
+    :where(html) {
+        scroll-behavior: smooth;
+    }
+}
+
+/* 4. line height and text rendering improvement */
+:where(html) {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. ensure full viewport height */
+:where(html, body) {
+    min-block-size: 100%;
+}
+
+/* 6. improve line wrapping */
+:where(h1, h2, h3,
+    h4, h5, h6) {
+    text-wrap: balance;
+}
+
+:where(p) {
+    text-wrap: pretty;
+}
+
+:where(figure)>:where(figcaption) {
+    text-wrap: balance;
+}
+
+:where(p, h1, h2, h3,
+    h4, h5, h6) {
+    overflow-wrap: break-word;
+}
+
+
+
+/* 7. making media elements block-level */
+:where(img,
+    svg,
+    video,
+    canvas,
+    picture,
+    audio,
+    iframe,
+    embed,
+    object) {
+    display: block
+}
+
+:where(img, svg, video, canvas, picture) {
+    block-size: auto;
+    max-inline-size: 100%
+}
+
+/* 8. inherit font and letter spacing for form controls */
+:where(input,
+    button,
+    textarea,
+    select),
+:where(input[type=file])::-webkit-file-upload-button {
+    font: inherit;
+    letter-spacing: inherit
+}
+
+/* 9. textarea can only resized vertically and will grow to adjust its content */
+:where(textarea) {
+    resize: vertical;
+    field-sizing: content;
+}
+
+/* 10. table */
+:where(table) {
+    width: fit-content;
+    border-collapse: collapse;
+}
+
+:where(pre) {
+    direction: ltr;
+    max-inline-size: max-content;
+    min-inline-size: 0;
+    white-space: pre;
+    writing-mode: lr
+}
+
+:where(a[href],
+    area,
+    button,
+    input:not([type=text],
+        [type=email],
+        [type=number],
+        [type=password],
+        [type=""],
+        [type=tel],
+        [type=url]),
+    label[for],
+    select,
+    summary,
+    [tabindex]:not([tabindex*="-"],
+        pre)) {
+    cursor: pointer
+}
+
+/*  this will disable additional non-standard gestures such as double-tap to zoom*/
+:where(a[href],
+    area,
+    button,
+    input,
+    label[for],
+    select,
+    summary,
+    textarea,
+    [tabindex]:not([tabindex*="-"])) {
+    touch-action: manipulation
+}
+
+/*Site CSS*/
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    /* background-color: green; */
+}
+
+header {
+    color: white;
+    background-color: #051540;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-detail {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 50px;
+}
+
+.header-left p {
+    width: 100%;
+    text-align: left;
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+    flex: wrap;
+    justify-content: left;
+    align-items: center;
+    padding: 16px 0;
+    gap: 10px;
+}
+
+.header-img {
+    flex: 1;
+    width: 100%;
+    padding: 50px;
+}
+
+.header-img img {
+    padding: 30px 8px;
+    width: 100%;
+    object-fit: cover;
+}
+
+nav {
+    height: 100px;
+    background-color: #051540;
+    padding: 0;
+}
+
+nav img {
+    width: 120px;
+    margin-left: 50px;
+    margin-top: 16px;
+}
+
+h1 {
+    color: white;
+    font-size: 48px;
+    padding: 16px 8px;
+}
+
+h2 {
+    color: #164baf;
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 16px;
+    display: inline;
+}
+
+p {
+    display: inline;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+button {
+    width: 160px;
+    height: 60px;
+    padding: 16px 8px;
+    color: #dddddd;
+    background-color: #164baf;
+    border: none;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #d1e3ff;
+    color: #164baf;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#contact-button {
+    border: 0.5px solid #dddddd;
+    background-color: #051540;
+}
+
+#contact-button:hover {
+    background-color: #d1e3ff;
+    color: #164baf;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.planet-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 16px;
+}
+
+.blue-text {
+    color: #164baf;
+    font-weight: 700;
+}
+
+.visualize {
+    /* background-color: red; */
+    background-color: #f2f7ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 16px;
+}
+
+.planets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.planets img {
+    width: 285px;
+    height: 340px;
+    border: none;
+    border-radius: 30px;
+    object-fit: cover;
+    margin: 5px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.fact-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 16px;
+}
+
+.fact-table h2 {
+    align-self: flex-start;
+    text-align: left;
+}
+
+.fact-table p {
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+caption {
+    width: 100%;
+    align-self: flex-start;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 8px;
+    color: #0f2a44;
+}
+
+table,
+th,
+td {
+    border: 3px solid #ffffff;
+    border-collapse: collapse;
+    padding: 16px;
+
+    align-content: center;
+}
+
+
+thead {
+    background-color: #164baf;
+}
+
+th {
+    color: #ffffff;
+}
+
+thead th:first-child {
+    border-top-left-radius: 16px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 16px;
+}
+
+.double-span {
+    background-color: #d1e3ff;
+}
+
+td {
+    text-align: center;
+    background-color: #F2F7FF;
+}
+
+
+.question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 16px;
+}
+
+.red-star {
+    color: red;
+}
+
+.question h2 {
+    text-align: left;
+}
+
+.question p {
+    text-align: left;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    /* background-color: red; */
+}
+
+.form-input {
+    /* background-color: blue; */
+    width: calc(50% - 20px);
+    border: none;
+}
+
+label {
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+input,
+select,
+textarea {
+    width: 95%;
+    height: 44px;
+    padding: 0 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 150px;
+}
+
+.contact {
+    /* min-width: 45%; */
+    display: flex;
+    flex-direction: column;
+}
+
+.contact fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border: none;
+    font-weight: 600;
+}
+
+label {
+    font-weight: 600;
+}
+
+fieldset {
+    width: 40%;
+}
+
+.personal-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+    text-align: left;
+    color: #FFFFFF;
+    background-color: #051540;
+    padding: 50px;
+    gap: 20px;
+}
+
+footer hr {
+    width: 100%;
+    border: 1px solid #ffffff2a;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+footer p {
+    text-align: left;
+    display: inline-block;
+}
+
+footer div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media screen and (width <=720px) {
+    header {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-detail {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .header-detail {
+        padding-top: 0;
+    }
+
+    .header-left {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .header-left p {
+        width: 100%;
+        text-align: center;
+        line-height: 150%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+
+    .header-buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 0;
+        gap: 10px;
+    }
+
+    .header-buttons button {
+        width: 45%;
+    }
+
+    .header-img {
+        padding: 0;
+        width: 100%;
+    }
+
+    .header-img img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    nav {
+        background-color: #051540;
+        justify-content: center;
+    }
+
+    nav img {
+        width: 120px;
+        margin: 50px;
+    }
+
+    h1 {
+        color: white;
+        font-size: 28px;
+        line-height: 150%;
+        font-weight: 600;
+        padding: 16px 8px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .planets {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    .planets img {
+        width: 95%;
+        height: 230px;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    .planets img:first-child {
+        border-top-left-radius: 30px;
+    }
+
+    .planets img:nth-child(2) {
+        border-top-right-radius: 30px;
+    }
+
+    .planets img:nth-last-child(2) {
+        border-bottom-left-radius: 30px;
+    }
+
+    .planets img:last-child {
+        border-bottom-right-radius: 30px;
+    }
+
+    .planet-data {
+        padding: 20px;
+    }
+
+    .visualize {
+        padding: 20px;
+    }
+
+    .visualize h2 {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .fact-table {
+        padding: 20px;
+    }
+
+    .question {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .question h2 {
+        text-align: center;
+    }
+
+    .question p {
+        text-align: center;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .form-input {
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    .contact {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact fieldset {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .fact-table {
+        display: none;
+    }
+
+    iframe {
+        width: auto;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .terms {
+        display: flex;
+        flex-direction: column;
+    }
+}
