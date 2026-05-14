@@ -506,6 +506,10 @@ footer div {
   align-items: center;
 }
 
+.terms {
+  display: flex;
+  flex-direction: column;
+}
 
 @media screen and (width <=720px) {
   header {
