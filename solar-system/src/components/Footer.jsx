@@ -13,7 +13,6 @@ function Footer() {
                     <li>Raphael</li>
                     <li>Olayemi</li>
                 </ul>
-                <p>first name of group members</p>
                 <hr />
                 <div className="terms">
                     <p>&copy; 2026 Design by Amaka & Ifeoma A.</p>

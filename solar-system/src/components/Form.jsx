@@ -3,7 +3,7 @@
 function Form() {
     return (
         <>
-            <section class="question">
+            <section class="question" id="contact">
                 <h2>Have Questions About Planetary Science?</h2>
                 <p>Interested in learning more about space, astronomy, or how planetary data is collected and analyzed?
                     Reach out and we’ll get back to you.</p>
@@ -24,7 +24,7 @@ function Form() {
                         <label for="message">Message <span class="red-star">*</span></label>
                         <textarea rows="10" cols="70" id="message" placeholder="Enter your message"></textarea>
                     </fieldset>
-                    <button type="submit">Submit</button>
+                    <button type="submit" formTarget="blank">Submit</button>
                 </form>
             </section>
         </>
