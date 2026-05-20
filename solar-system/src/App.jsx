@@ -2,15 +2,19 @@ import Header from './components/Header'
 import PlanetData from './components/PlanetData'
 import Footer from './components/Footer'
 import Visualise from './components/Visualise'
+import Table from './components/Table'
+import Form from './components/Form'
 
 function App() {
 
   return (
     <>
-      <Header></Header>
+      <Header />
       <PlanetData />
       <Visualise />
-      <Footer></Footer>
+      <Table />
+      <Form />
+      <Footer />
     </>
   )
 }
