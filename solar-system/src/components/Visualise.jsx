@@ -16,15 +16,13 @@ function Visualise() {
                 <h2>Visualizing the Differences Between Planets</h2>
                 <p>Each planet in our solar system has unique physical characteristics. Visual comparisons help highlight
                     how vastly different terrestrial planets are from gas giants and ice giants.</p>
-                <div className="planets">
+                <div class="planets">
                     {planets.map(planet => (
-                        <figure>
+                        <div>
                             <img src={planet.image} alt={planet.planet} />
-                            <figcaption className='planet-details'>
-                                <p key={planet}>{planet.planet}</p>
-                                <p key={planet}>{planet.distanceFromSun}</p>
-                            </figcaption>
-                        </figure>
+                            <p key={planet}>{planet.planet}</p>
+                            <p key={planet}>{planet.distanceFromSun}</p>
+                        </div>
                     ))}
                 </div>
             </section>
