@@ -92,3 +92,4 @@ Once the installation is complete, start the development server using the projec
 During development, the project supports live reloading, meaning any changes made to the code will automatically reflect in the browser without needing to refresh manually.
 
 ## Live Deployment Link
+[text](https://tsa-solar-system.vercel.app/)
