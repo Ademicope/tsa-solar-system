@@ -1,0 +1,28 @@
+Revert "Merge branch 'main' into update-readme"
+reverting merge from main into update-readme
+This reverts commit 0fdd423c09ada97aee1ebf4e9847479e6a7e42d7, reversing
+changes made to f1a7bce41275083749d892593591a45ffaef33ae.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch update-readme
+# Your branch is up to date with 'origin/update-readme'.
+#
+# Changes to be committed:
+#	modified:   solar-system/README.md
+#	modified:   solar-system/src/App.jsx
+#	modified:   solar-system/src/components/Footer.jsx
+#	deleted:    solar-system/src/components/Form.jsx
+#	modified:   solar-system/src/components/PlanetData.jsx
+#	deleted:    solar-system/src/components/Table.jsx
+#	modified:   solar-system/src/components/Visualise.jsx
+#	modified:   solar-system/src/index.css
+#
+# Changes not staged for commit:
+#	deleted:    index.html
+#	deleted:    style.css
+#
+# Untracked files:
+#	README.md
+#

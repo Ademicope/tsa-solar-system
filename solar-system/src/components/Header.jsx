@@ -12,8 +12,12 @@ function Header() {
                         <p>Understand the planets not just by name, but by measurable facts. From size and mass to gravity and
                             density, this page breaks down the solar system in a clear, data-driven way.</p>
                         <div className="header-buttons">
-                            <button>Explore the Data</button>
-                            <button id="contact-button">Contact us</button>
+                            <a href="#planet-images">
+                                <button>Explore the Data</button>
+                            </a>
+                            <a href="#contact">
+                                <button id="contact-button">Contact us</button>
+                            </a>
                         </div>
                     </div>
                     <div className="header-img">

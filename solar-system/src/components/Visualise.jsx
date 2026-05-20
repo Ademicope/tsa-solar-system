@@ -12,7 +12,7 @@ function Visualise() {
 
     return (
         <>
-            <section className="visualize">
+            <section className="visualize" id="planet-images">
                 <h2>Visualizing the Differences Between Planets</h2>
                 <p>Each planet in our solar system has unique physical characteristics. Visual comparisons help highlight
                     how vastly different terrestrial planets are from gas giants and ice giants.</p>

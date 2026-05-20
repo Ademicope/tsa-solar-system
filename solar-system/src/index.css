@@ -138,6 +138,9 @@ padding is optional but i do this because of lists*/
 }
 
 /*Site CSS*/
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   box-sizing: border-box;

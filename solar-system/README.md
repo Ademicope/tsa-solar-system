@@ -77,7 +77,7 @@ The goal of this project is to combine science, education, and technology to cre
 8.  React Component Structure | Group Work |
 9.  UI Design Implementation | Group Work |
 10. Testing and Debugging | Group Work |
-11. GitHub Collaboration & Repository Management | Group Work |
+11. GitHub Collaboration & Repository Management | Opeoluwa Adekunle |
 
 ## Running the Project Locally
 
@@ -90,7 +90,5 @@ After opening the project, install all required dependencies by running the inst
 Once the installation is complete, start the development server using the project’s start command. After the server runs successfully, a local URL (usually shown in the terminal) will be generated. Open this URL in your browser to view the application.
 
 During development, the project supports live reloading, meaning any changes made to the code will automatically reflect in the browser without needing to refresh manually.
-
-For production use, the project can be compiled into an optimized build version, which prepares it for deployment on hosting platforms.
 
 ## Live Deployment Link
