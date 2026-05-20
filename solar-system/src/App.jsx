@@ -3,16 +3,18 @@ import PlanetData from './components/PlanetData'
 import Footer from './components/Footer'
 import Visualise from './components/Visualise'
 import Table from './components/Table'
+import Form from './components/Form'
 
 function App() {
 
   return (
     <>
-      <Header></Header>
+      <Header />
       <PlanetData />
       <Visualise />
       <Table />
-      <Footer></Footer>
+      <Form />
+      <Footer />
     </>
   )
 }
