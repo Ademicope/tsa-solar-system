@@ -259,18 +259,11 @@ button:hover {
 
 .planet-data {
   display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 50px;
-  gap: 24px;
-}
-
-.planet-data-details {
-  width: 600px;
-  display: flex;
-  flex-direction: column;
+  gap: 16px;
 }
 
 .blue-text {
@@ -295,37 +288,15 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  width: 390px;
-}
-
-.planets figure {
-  width: 100%;
 }
 
 .planets img {
-  width: 100%;
-  height: 250px;
+  width: 285px;
+  height: 340px;
   border: none;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-radius: 30px;
   object-fit: cover;
-  margin: 0px;
-}
-
-.planet-details {
-  display: flex;
-  flex-direction: column;
-  background-color: #FFFFFF;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.planet-details p {
-  font-weight: bold;
-  margin-top: 5px;
+  margin: 5px;
 }
 
 video {
@@ -498,14 +469,6 @@ input[type="checkbox"],
 input[type="radio"] {
   width: 18px;
   height: 18px;
-}
-
-.question form button {
-  width: 330px;
-}
-
-.question form textarea {
-  height: 45px;
 }
 
 footer {
