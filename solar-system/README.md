@@ -38,12 +38,9 @@ The platform transforms complex astronomical data into a simple, engaging, and e
 
 - React.js
 - JavaScript
+- HTML
 - CSS
 - Git & GitHub
-
-## Learning Objective
-
-The goal of this project is to combine science, education, and technology to create an interactive platform that makes learning about the solar system more engaging and data-driven.
 
 ## Group Members
 
@@ -67,10 +64,10 @@ The goal of this project is to combine science, education, and technology to cre
 
 ## Project Components and Team Contributions
 
-1.  Navbar Component | Opeoluwa Adekunle |
-2.  Hero Section | Gbesan Ayomidayo Promise |
+1.  Header Component | Opeoluwa Adekunle |
+2.  Hero Section/Documentation | Gbesan Ayomidayo Promise |
 3.  Planet Data Cards | Mayindi Samuel Zhema |
-4.  Footer Section | Agbochenu Rapheal |
+4.  Form/Footer Section | Agbochenu Rapheal |
 5.  Responsive Styling | Group Work |
 6.  Dynamic Data Rendering | Group Work |
 7.  Planet Comparison Section | Group Work |
@@ -92,4 +89,4 @@ Once the installation is complete, start the development server using the projec
 During development, the project supports live reloading, meaning any changes made to the code will automatically reflect in the browser without needing to refresh manually.
 
 ## Live Deployment Link
-[text](https://tsa-solar-system.vercel.app/)
+[Live link](https://tsa-solar-system.vercel.app/)
